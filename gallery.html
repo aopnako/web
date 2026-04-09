@@ -9,46 +9,23 @@
   <body class="page gallery-page">
     <main class="gallery-shell fade-in slide-up">
       <header>
-        <h1>茶壶时期长廊</h1>
-        <p>每个茶壶代表一个时期：自定义名字，点击茶壶进入“倒水图片流”。</p>
+        <h1>我的照片长廊</h1>
+        <p>上传照片或输入视频链接，打造你的互动记忆墙。</p>
       </header>
 
-      <section class="period-manager">
+      <section class="gallery-controls">
         <label>
-          新时期名称
-          <input type="text" id="periodNameInput" placeholder="例如：大学时期" maxlength="24" />
+          上传照片
+          <input type="file" id="photoInput" accept="image/*" />
         </label>
-        <button id="addPeriodBtn" class="primary-btn">新增茶壶时期</button>
+        <label>
+          添加视频链接
+          <input type="url" id="galleryVideoInput" placeholder="https://..." />
+        </label>
+        <button id="addVideoBtn" class="primary-btn">加入长廊</button>
       </section>
 
-      <section id="periodList" class="period-list"></section>
-
-      <section id="periodDetail" class="period-detail" hidden>
-        <header class="period-detail-head">
-          <h2 id="activePeriodTitle">当前时期</h2>
-          <div class="period-actions">
-            <button id="renamePeriodBtn" class="ghost-btn">重命名</button>
-            <button id="deletePeriodBtn" class="ghost-btn danger">删除时期</button>
-          </div>
-        </header>
-
-        <section class="water-upload-controls">
-          <label>
-            上传图片
-            <input type="file" id="periodImageInput" accept="image/*" />
-          </label>
-        </section>
-
-        <section class="waterfall-scene" aria-label="茶壶倒水图片流">
-          <div class="teapot-anchor" aria-hidden="true">
-            <span class="pot-body"></span>
-            <span class="pot-lid"></span>
-            <span class="pot-handle"></span>
-            <span class="pot-spout"></span>
-          </div>
-          <div id="waterStream" class="water-stream"></div>
-        </section>
-      </section>
+      <section id="galleryGrid" class="gallery-grid"></section>
 
       <a class="back-link" href="menu.html">← 回到菜单</a>
     </main>
