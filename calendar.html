@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>月历咖啡馆</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page calendar-page">
+    <main class="calendar-layout fade-in">
+      <aside class="month-arc-panel">
+        <div class="month-illustration leaf-a" aria-hidden="true"></div>
+        <div class="month-illustration leaf-b" aria-hidden="true"></div>
+        <h1>月份弧形切换</h1>
+        <p>悬停预览 · 点击锁定月份</p>
+        <div id="monthArc" class="month-arc" aria-label="月份弧形选择"></div>
+        <a class="back-link" href="menu.html">← 回到菜单</a>
+      </aside>
+
+      <section class="calendar-panel">
+        <header>
+          <h2 id="calendarTitle">2026 年 1 月</h2>
+          <p>点击日期可上传当天图片，并保存视频链接。</p>
+        </header>
+
+        <div class="weekday-row">
+          <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span>
+        </div>
+        <div id="calendarGrid" class="calendar-grid"></div>
+      </section>
+    </main>
+
+    <dialog id="dayEditor" class="day-editor">
+      <form method="dialog" id="entryForm">
+        <h3 id="editorDate">编辑日期</h3>
+        <label>
+          上传图片
+          <input type="file" id="imageFileInput" accept="image/*" />
+        </label>
+        <img id="imagePreview" class="upload-preview" alt="图片预览" hidden />
+        <label>
+          视频链接 URL
+          <input type="url" id="videoInput" placeholder="https://..." />
+        </label>
+        <menu>
+          <button value="cancel" type="reset">取消</button>
+          <button value="default" id="saveEntry" type="submit">保存</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>

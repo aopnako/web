@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tea Menu</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page menu-page">
+    <main class="menu-shell fade-in slide-up">
+      <header>
+        <h1>Tea & Memory Menu</h1>
+        <p>悬停查看描述，点击进入对应页面。</p>
+      </header>
+
+      <section class="menu-grid">
+        <a href="calendar.html" class="menu-card coffee-card" data-desc="咖啡主题日历：记录每天图片与视频链接">
+          <span class="coffee-shape" aria-hidden="true">
+            <span class="coffee-cup"></span>
+            <span class="coffee-handle"></span>
+            <span class="coffee-steam steam-a"></span>
+            <span class="coffee-steam steam-b"></span>
+          </span>
+          <h2>月历咖啡馆</h2>
+          <p class="desc">按月份切换的插画风日历</p>
+        </a>
+
+        <a href="gallery.html" class="menu-card" data-desc="照片长廊：上传、管理照片与视频记忆">
+          <div class="plate-icon" aria-hidden="true"></div>
+          <h2>时光长廊</h2>
+          <p class="desc">照片+视频画廊展示</p>
+        </a>
+      </section>
+
+      <a class="back-link" href="index.html">← 返回首页</a>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
